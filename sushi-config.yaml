@@ -1,0 +1,44 @@
+# Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
+
+id: hdh.fhir.fr.eds # the last part of id and canonical must be the same
+canonical: https://health-data-hub.fr/ig/fhir/eds # the last part of canonical and id must be the same
+name: HDHEDS
+title: Guide d'implémentation du GT Standards et Interopérabilité
+publisher:
+  name: HDH
+  url: https://health-data-hub.fr
+jurisdiction: urn:iso:std:iso:3166#FRA "France"
+status: draft
+version: 0.1.0 # shall conform to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
+fhirVersion: 4.0.1
+copyrightYear: 2024+
+releaseLabel: ci-build # ci-build: the continuous integration build release (not stable), draft: draft version, qa-preview: frozen snapshot for non-ballot feedback, ballot: frozen snapshot for ballot, trial-use: official release with ‘trial use’ status, release: official release for use, update: official release with ‘trial use’ status - posted as an un-balloted STU update, normative+trial-use: official release with mixture of trial use and normative content
+
+dependencies:
+  hl7.fhir.fr.core: 2.0.0
+
+# see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+parameters:
+  shownav: 'false'
+  path-resource:
+    - input/fml
+#  logging:
+#    - tx #tx: Messages describing the use of the terminology server (for debugging)
+#    - html #html: Log when validating a html page (troubleshooting only - leave off)
+#    - generate #generate: Log when producing an individual resource (troubleshooting only - leave off)
+#    - init #init: Messages describing the start-up process (for debugging)
+#    - progress #progress: Overall progress messages
+
+pages:
+  index.md:
+    title: Accueil
+  downloads.md:
+    title: Téléchargements et usages
+
+menu:
+  Accueil: index.html
+  Ressources de conformité: artifacts.html
+  Autres ressources:
+    Téléchargements et usage: downloads.html
+    "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
+    "Site du HDH ": new-tab https://www.health-data-hub.fr
