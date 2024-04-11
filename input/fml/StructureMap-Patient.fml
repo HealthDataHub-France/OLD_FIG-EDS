@@ -3,13 +3,14 @@
 /// status = 'draft'
 
 uses "https://health-data-hub.fr/ig/fhir/eds/StructureDefinition/Patient" alias Patient as source
+uses "https://health-data-hub.fr/ig/fhir/eds/StructureDefinition/Concept" alias ConceptTable as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 
 imports "https://health-data-hub.fr/ig/fhir/eds/StructureMap/Person"
 imports "https://health-data-hub.fr/ig/fhir/eds/StructureMap/Location"
 imports "https://health-data-hub.fr/ig/fhir/eds/StructureMap/Death"
 
-group Patient(source src: Patient, target tgtBundle : Bundle) {
+group Patient(source src: Patient, source srcConcept: ConceptTable, target tgtBundle : Bundle) {
   src.id as srcId -> tgtBundle.id = uuid() "setId";
   src -> tgtBundle.type = 'transaction' "setType";
 	src -> tgtBundle.entry as newEntry then {
@@ -26,7 +27,7 @@ group Patient(source src: Patient, target tgtBundle : Bundle) {
 					src -> newPerson.person_id = uuid() as newPersonId "setId";
 				  src -> append('Person/', newPersonId) as targetRef,
 					       newProvenance.target = reference(targetRef) "setProvenanceTarget";
-					src then Person(src, newPerson) "transformPerson";
+					src then Person(src, srcConcept, newPerson) "transformPerson";
 					src -> newEntry.fullUrl = append('https://health-data-hub.fr/ig/fhir/eds/Person/', newPersonId) "setFullUrl";
 					src -> newEntry.request as newRequest then {
 						src -> newRequest.method = 'POST' "setMethod";

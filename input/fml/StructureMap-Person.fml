@@ -2,14 +2,16 @@
 /// title = 'Mapping Patient resource to Person OMOP Domain'
 /// status = 'draft'
 
-uses "https://health-data-hub.fr/ig/fhir/eds/StructureDefinition/Patient" alias Patient as source
+uses "https://health-data-hub.fr/ig/fhir/eds/StructureDefinition/Patient" as source
+uses "https://health-data-hub.fr/ig/fhir/eds/StructureDefinition/Concept" alias ConceptTable as source
 uses "https://health-data-hub.fr/ig/fhir/eds/StructureDefinition/Person" alias PersonTable as target
 
-group Person(source src: Patient, target tgt : PersonTable) {
+group Person(source src: Patient, source srcConcept: ConceptTable, target tgt : PersonTable) {
 	src.id as id -> tgt.person_source_value = cast(id, String);
 	src.gender as gender -> translate(gender, 'https://health-data-hub.fr/ig/fhir/eds/ConceptMap/Gender', 'code') as tgtGender,
-		                      tgt.gender_concept_id = tgtGender.code,
-		                      tgt.gender_source_value = cast(gender, String);
+		                      tgt.gender_source_value = cast(gender, String) then {
+														srcConcept where srcConcept.concept_code = tgtGender.code -> tgt.gender_concept_id = srcConcept "setConcept";
+													} "transformGender";
 	src.birthDate as srcBirthDate -> tgt.birth_datetime = srcBirthDate, 
 																	 tgt.year_of_birth = evaluate(srcBirthDate, substring(0, 4)), 
 		                               tgt.month_of_birth = evaluate(srcBirthDate, substring(5, 2)), 
