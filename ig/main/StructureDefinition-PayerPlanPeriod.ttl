@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PayerPlanPeriod"] ; # 
   fhir:title [ fhir:v "Payer Plan Period OMOP Table"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-04-12T15:16:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-12T15:27:50+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HDH"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HDH" ] ;

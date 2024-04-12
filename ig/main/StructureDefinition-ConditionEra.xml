@@ -25,7 +25,7 @@ condition era.">condition_occurrence_count</a><a name="ConditionEra.condition_oc
   <name value="ConditionEra"/>
   <title value="Condition Era OMOP Table"/>
   <status value="draft"/>
-  <date value="2024-04-12T15:16:50+00:00"/>
+  <date value="2024-04-12T15:27:50+00:00"/>
   <publisher value="HDH"/>
   <contact>
     <name value="HDH"/>
