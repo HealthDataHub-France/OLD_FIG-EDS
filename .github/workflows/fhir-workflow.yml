@@ -29,13 +29,13 @@ jobs:
           node-version: 20
                     
       - name: Install modules
-        run: npm install -g fsh-sushi@${{ env.SUSHI_VERSION }}
+        run: npm install -g fsh-sushi@${{ vars.SUSHI_VERSION }}
       - name: Run sushi
         run: sushi .
       
       # Downloads the newest version of the IG Publisher, this could probable be cached.
       - name: 📥 Download IG Publisher
-        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/${{ env.IG_PUBLISHER_VERSION }}/download/publisher.jar
+        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/${{ vars.IG_PUBLISHER_VERSION }}/download/publisher.jar
         
       - name: Install ruby, jekyll and graphviz        
         run: |
