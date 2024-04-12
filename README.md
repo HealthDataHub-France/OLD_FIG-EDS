@@ -1,5 +1,7 @@
 # Guide d'implémentation FHIR du GT Standards et Interopérabilité
 
+Ce guide peut être visible à l'adresse suivante : https://healthdatahub-france.github.io/FIG-EDS/ig/main/.
+
 ## Contexte
 
 ## Construction du guide
