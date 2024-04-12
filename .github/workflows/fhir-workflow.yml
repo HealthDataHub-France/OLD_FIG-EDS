@@ -49,7 +49,7 @@ jobs:
       
       # Builds the HTML page for the IG.
       - name: 🏃‍♂️ Run IG Publisher
-        run : java -Dfile.encoding=UTF-8 -jar publisher.jar -no-sushi -ig . -publish https://healthdatahub-france.github.io/ig/${{ steps.branch-name.outputs.current_branch }}
+        run : java -Dfile.encoding=UTF-8 -jar publisher.jar -no-sushi -ig . -publish https://healthdatahub-france.github.io/FIG-EDS/ig/${{ steps.branch-name.outputs.current_branch }}
       
       # Publishes the HTML page to a seperate branch in order to host it using GitHub-Pages.
       # This will overwrite the currently published HTML page.
