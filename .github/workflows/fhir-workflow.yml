@@ -3,12 +3,16 @@ name: Workflow Publish
 on:
   workflow_call:
   push:
+    branches:
+      - '!gh-pages'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
   Call-Publish :
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  
 
     steps:
 
@@ -22,16 +26,16 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
                     
       - name: Install modules
-        run: npm install -g fsh-sushi
+        run: npm install -g fsh-sushi@$SUSHI_VERSION
       - name: Run sushi
         run: sushi .
       
       # Downloads the newest version of the IG Publisher, this could probable be cached.
       - name: 📥 Download IG Publisher
-        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/$IG_PUBLISHER_VERSION/download/publisher.jar
         
       - name: Install ruby, jekyll and graphviz        
         run: |
