@@ -3,12 +3,12 @@
   "id" : "Gender",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to (not specified)</p><p>ACTIVE. Published on 2024-04-12 15:27:50+0000 by HDH (HDH: <a href=\"https://health-data-hub.fr\">https://health-data-hub.fr</a>). </p><br/><p><b>Group 1</b> Mapping from <a href=\"https://hl7.fr/ig/fhir/core/2.0.0/ValueSet-fr-core-vs-patient-gender-INS.html\">FR Core ValueSet Patient gender INS ValueSet</a> to <code>https://fhir-terminology.ohdsi.org</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>male</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>M (MALE)</td></tr><tr><td>female</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>F (FEMALE)</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to (not specified)</p><p>ACTIVE. Published on 2024-04-12 15:58:12+0000 by HDH (HDH: <a href=\"https://health-data-hub.fr\">https://health-data-hub.fr</a>). </p><br/><p><b>Group 1</b> Mapping from <a href=\"https://hl7.fr/ig/fhir/core/2.0.0/ValueSet-fr-core-vs-patient-gender-INS.html\">FR Core ValueSet Patient gender INS ValueSet</a> to <code>https://fhir-terminology.ohdsi.org</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>male</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>M (MALE)</td></tr><tr><td>female</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>F (FEMALE)</td></tr></table></div>"
   },
   "url" : "https://health-data-hub.fr/ig/fhir/eds/ConceptMap/Gender",
   "version" : "0.1.0",
   "status" : "active",
-  "date" : "2024-04-12T15:27:50+00:00",
+  "date" : "2024-04-12T15:58:12+00:00",
   "publisher" : "HDH",
   "contact" : [{
     "name" : "HDH",

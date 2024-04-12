@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "VisitDetail"] ; # 
   fhir:title [ fhir:v "Visit Detail OMOP Table"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-04-12T15:27:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-12T15:58:12+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HDH"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HDH" ] ;

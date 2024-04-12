@@ -3,7 +3,7 @@ HDHEDS : Validation Results
 
 err = 6, warn = 682, info = 5
 IG Publisher Version: 1.6.4
-Generated Fri Apr 12 15:30:47 UTC 2024. FHIR version 4.0.1 for hdh.fhir.fr.eds#0.1.0 (canonical = https://health-data-hub.fr/ig/fhir/eds)
+Generated Fri Apr 12 16:01:08 UTC 2024. FHIR version 4.0.1 for hdh.fhir.fr.eds#0.1.0 (canonical = https://health-data-hub.fr/ig/fhir/eds)
  Build Errors : 0 / 4 / 0
  /home/runner/work/FIG-EDS/FIG-EDS/fsh-generated/resources/ConceptMap-Gender : 0 / 8 / 1
  /home/runner/work/FIG-EDS/FIG-EDS/fsh-generated/resources/ImplementationGuide-hdh.fhir.fr.eds : 0 / 0 / 1
